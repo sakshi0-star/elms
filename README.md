@@ -29,3 +29,12 @@ Built using **Node.js, Express, MySQL, HTML, CSS, and JavaScript**.
 ---
 
 ## 📁 Project Structure
+Backend/
+│── server.js
+│── package.json
+│── db.js (if used)
+
+Frontend/
+│── index.html
+│── style.css
+│── script.js
