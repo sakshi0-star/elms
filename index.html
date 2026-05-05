@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ELMS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div id="loginBox" class="card">
+        <h2>🔐 Login</h2>
+
+        <input id="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dash" class="hidden">
+
+        <div class="topbar">
+            <h2>👨‍💼 Employee Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="grid">
+
+            <!-- APPLY LEAVE -->
+            <div class="card">
+                <h3>📝 Apply Leave</h3>
+
+                <input id="type" placeholder="Leave Type">
+                <input id="start" type="date">
+                <input id="end" type="date">
+
+                <button onclick="applyLeave()">Submit</button>
+            </div>
+
+            <!-- MY LEAVES -->
+            <div class="card">
+                <h3>📄 My Leaves</h3>
+                <button onclick="loadLeaves()">Refresh</button>
+                <div id="leaveList"></div>
+            </div>
+
+        </div>
+
+        <!-- MANAGER -->
+        <div class="card manager">
+            <h3>👨‍💼 Manager Panel</h3>
+            <button onclick="loadManager()">Load All Requests</button>
+            <div id="managerList"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

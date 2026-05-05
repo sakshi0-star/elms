@@ -1,0 +1,8 @@
+app.get("/manager/leaves", (req, res) => {
+    const sql = "SELECT * FROM leave_requests";
+
+    db.query(sql, (err, result) => {
+        if (err) return res.send(err);
+        res.json(result);
+    });
+});
